@@ -104,12 +104,12 @@
 
         QWERTY {
             bindings = <
-&mt SQT ESC       &kp N1  &kp N2   &kp N3     &kp N4     &kp N5           &kp N6         &kp N7      &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB           &kp Q   &kp W    &kp E      &kp R      &kp T            &kp Y          &kp U       &kp I      &kp O    &kp P     &kp BSLH
-&kp LEFT_SHIFT    &kp A   &lt 4 S  &kp D      &kp F      &kp G            &kp H          &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z   &kp X    &kp C      &kp V      &kp B            &kp N          &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                   &kp SPACE  &to 1      &lgui_hanguel    &kp RIGHT_ALT  &kp DELETE
-                                              &mkp LCLK  &mkp RCLK        &kp ENTER
+&mt SQT ESC       &kp N1  &kp N2  &kp N3     &kp N4     &kp N5           &kp N6         &kp N7      &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB           &kp Q   &kp W   &kp E      &kp R      &kp T            &kp Y          &kp U       &kp I      &kp O    &kp P     &kp BSLH
+&kp LEFT_SHIFT    &kp A   &kp S   &kp D      &kp F      &kp G            &kp H          &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C      &kp V      &kp B            &kp N          &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                  &kp SPACE  &to 1      &lgui_hanguel    &kp RIGHT_ALT  &kp DELETE
+                                             &mkp LCLK  &mkp RCLK        &kp ENTER
             >;
         };
 
