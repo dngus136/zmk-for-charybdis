@@ -165,7 +165,7 @@
 &kp F1          &kp F2         &kp F3        &kp F4             &kp F5        &kp F6                       &kp F7             &kp F8            &kp F9             &kp F10    &kp F11          &kp F12
 &kp KP_NUMLOCK  &kp BACKSPACE  &kp N7        &kp N8             &kp N9        &mt MINUS PLUS               &kp C_VOLUME_UP    &kp HOME          &kp UP             &kp END    &kp PRINTSCREEN  &kp SCROLLLOCK
 &kp K_CALC      &kp DELETE     &kp NUMBER_4  &mt LEFT_SHIFT N5  &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN           &kp RIGHT  &none            &kp MINUS
-&kp CAPSLOCK    &kp CLEAR      &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &none                        &kp K_MUTE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT          &trans
+&kp LCTRL       &kp CLEAR      &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp CAPSLOCK                 &kp K_MUTE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT          &trans
                                              &kp SPACE          &to 0         &lgui_hanguel                &kp RIGHT_ALT      &mkp MB4
                                                                 &mkp LCLK     &mkp RCLK                    &kp ENTER
             >;
@@ -177,7 +177,7 @@
 &trans  &trans          &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &bt BT_NXT  &trans  &trans  &trans  &trans  &trans
-                                      &trans        &trans        &trans          &trans      &trans
+                                      &trans        &tog 0        &trans          &trans      &trans
                                                     &trans        &trans          &trans
             >;
         };
