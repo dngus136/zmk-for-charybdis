@@ -4,12 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&lt {
-    tapping-term-ms = <200>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
 / {
     macros {
         To0_macro: To0_macro {
@@ -45,7 +39,7 @@
             layers = <0 1>;
         };
 
-        Parenthesis_Left {
+        Parenthesis_L {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <7 8>;
             layers = <0 2>;
@@ -58,13 +52,13 @@
         };
 
         Scroll_down {
-            bindings = <&kp K_SCROLL_DOWN>;
+            bindings = <&kp C_AC_SCROLL_DOWN>;
             key-positions = <51 55>;
             layers = <0 1>;
         };
 
         Scroll_up {
-            bindings = <&kp K_SCROLL_UP>;
+            bindings = <&kp C_AC_SCROLL_UP>;
             key-positions = <52 55>;
             layers = <0 1>;
         };
@@ -83,13 +77,6 @@
     };
 
     behaviors {
-        layer_behavior: layer_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_BEHAVIOR";
-            #binding-cells = <0>;
-            bindings = <&tog 1>, <&tog 2>;
-        };
-
         lgui_hanguel: lgui_hanguel {
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI_HANGUEL";
