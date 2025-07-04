@@ -27,14 +27,14 @@
     combos {
         compatible = "zmk,combos";
 
-        copy {
-            bindings = <&kp K_COPY>;
+        Next {
+            bindings = <&mkp MB4>;
             key-positions = <37 38>;
             layers = <0 1>;
         };
 
-        paste {
-            bindings = <&kp K_PASTE>;
+        Previous {
+            bindings = <&mkp MB5>;
             key-positions = <39 40>;
             layers = <0 1>;
         };
@@ -60,18 +60,6 @@
         Page_up {
             bindings = <&kp PAGE_UP>;
             key-positions = <44 45>;
-            layers = <0 1>;
-        };
-
-        Previous {
-            bindings = <&mkp MB4>;
-            key-positions = <53 54>;
-            layers = <0 1>;
-        };
-
-        Next {
-            bindings = <&mkp MB5>;
-            key-positions = <49 50>;
             layers = <0 1>;
         };
 
