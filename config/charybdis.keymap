@@ -118,12 +118,6 @@
             key-positions = <53 54>;
         };
 
-        TaskManager {
-            bindings = <&kp C_AL_SELECT_TASK>;
-            key-positions = <49 50>;
-            layers = <0 1>;
-        };
-
         LeftShift {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <26 27 28>;
@@ -133,6 +127,18 @@
         RightShift {
             bindings = <&kp RIGHT_SHIFT>;
             key-positions = <31 32 33>;
+            layers = <0 1>;
+        };
+
+        TaskLeft {
+            bindings = <&kp C_AL_PREVIOUS_TASK>;
+            key-positions = <13 14>;
+            layers = <0 1>;
+        };
+
+        TaskRight {
+            bindings = <&kp C_AL_PREVIOUS_TASK>;
+            key-positions = <14 15>;
             layers = <0 1>;
         };
     };
