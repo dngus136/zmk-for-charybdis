@@ -65,7 +65,7 @@
 
         Hanja {
             bindings = <&kp LANG_HANJA>;
-            key-positions = <24 36>;
+            key-positions = <24 12>;
             layers = <0 1>;
         };
 
