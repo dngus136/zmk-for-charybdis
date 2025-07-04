@@ -35,7 +35,7 @@
 
         Previous {
             bindings = <&mkp MB5>;
-            key-positions = <39 40>;
+            key-positions = <39 38>;
             layers = <0 1>;
         };
 
@@ -53,13 +53,13 @@
 
         Page_down {
             bindings = <&kp PAGE_DOWN>;
-            key-positions = <43 44>;
+            key-positions = <44 45>;
             layers = <0 1>;
         };
 
         Page_up {
             bindings = <&kp PAGE_UP>;
-            key-positions = <44 45>;
+            key-positions = <45 46>;
             layers = <0 1>;
         };
 
@@ -88,6 +88,30 @@
             bindings = <&kp LEFT_ARROW>;
             key-positions = <32 31>;
         };
+
+        ScrollUp {
+            bindings = <&msc SCRL_UP>;
+            key-positions = <30 31>;
+            layers = <0 2>;
+        };
+
+        ScrollDown {
+            bindings = <&msc SCRL_DOWN>;
+            key-positions = <43 42>;
+            layers = <0 1>;
+        };
+
+        ScrollLeft {
+            bindings = <&msc SCRL_LEFT>;
+            key-positions = <39 40>;
+            layers = <0 1>;
+        };
+
+        ScrollRight {
+            bindings = <&msc SCRL_RIGHT>;
+            key-positions = <40 41>;
+            layers = <0 1>;
+        };
     };
 
     behaviors {
@@ -115,12 +139,12 @@
 
         F_layers {
             bindings = <
-&kp F1          &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7             &kp F8    &kp F9            &kp F10            &kp F11          &kp F12
-&kp KP_NUMLOCK  &kp BACKSPACE  &kp N7        &kp N8        &kp N9        &mt MINUS PLUS               &none              &kp HOME  &kp UP            &kp END            &kp PRINTSCREEN  &kp SCROLLLOCK
-&kp K_CALC      &kp DELETE     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &none              &kp LEFT  &kp DOWN          &kp RIGHT          &none            &kp MINUS
-&kp CAPSLOCK    &kp CLEAR      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                        &none              &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none            &trans
-                                             &trans        &to 0         &lgui_hanguel                &kp K_SCROLL_UP    &mkp MB4
-                                                           &mkp LCLK     &mkp RCLK                    &kp K_SCROLL_DOWN
+&kp F1          &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7          &kp F8    &kp F9            &kp F10            &kp F11          &kp F12
+&kp KP_NUMLOCK  &kp BACKSPACE  &kp N7        &kp N8        &kp N9        &mt MINUS PLUS               &none           &kp HOME  &kp UP            &kp END            &kp PRINTSCREEN  &kp SCROLLLOCK
+&kp K_CALC      &kp DELETE     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &none           &kp LEFT  &kp DOWN          &kp RIGHT          &none            &kp MINUS
+&kp CAPSLOCK    &kp CLEAR      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                        &none           &none     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none            &trans
+                                             &trans        &to 0         &lgui_hanguel                &msc SCRL_UP    &mkp MB4
+                                                           &mkp LCLK     &mkp RCLK                    &msc SCRL_DOWN
             >;
         };
 
