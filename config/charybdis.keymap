@@ -42,23 +42,23 @@
 
         QWERTY {
             bindings = <
-&kp ESC         &kp N1  &kp N2   &kp N3            &kp N4        &kp N5          &kp N6      &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W    &kp E             &kp R         &kp T           &kp Y       &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp CAPSLOCK    &kp A   &lt 4 S  &kp D             &lt 3 F       &kp G           &kp H       &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X    &kp C             &kp V         &lt 2 B         &kp N       &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                 &kp LEFT_CONTROL  &kp SPACE     &mo 1           &kp DELETE  &kp SPACE
-                                                   &kp LEFT_WIN  &kp LEFT_ALT    &kp ENTER
+&mt SQT ESC       &kp N1  &kp N2   &kp N3     &kp N4     &kp N5          &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &mt BACKSPACE MINUS
+&kp TAB           &kp Q   &kp W    &kp E      &kp R      &kp T           &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
+&kp LEFT_SHIFT    &kp A   &lt 4 S  &kp D      &lt 3 F    &kp G           &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X    &kp C      &kp V      &lt 2 B         &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                   &kp SPACE  &mo 1      &kp LEFT_GUI    &kp RIGHT_ALT  &kp SPACE
+                                              &mkp LCLK  &mkp RCLK       &kp ENTER
             >;
         };
 
         F_layers {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6        &kp F7     &kp F8     &kp F9             &kp F10       &kp F11          &kp F12
-&trans  &none   &none   &none   &none   &trans        &kp HOME   &kp END    &kp K_SCROLL_DOWN  &kp UP_ARROW  &kp K_SCROLL_UP  &kp EQUAL
-&trans  &none   &none   &none   &none   &trans        &mkp LCLK  &mkp RCLK  &kp LEFT           &kp DOWN      &kp RIGHT        &kp MINUS
-&trans  &trans  &trans  &trans  &trans  &none         &none      &none      &trans             &trans        &none            &trans
-                        &trans  &trans  &To0_macro    &mkp LCLK  &mkp RCLK
-                                &trans  &trans        &trans
+&kp F1  &kp F2        &kp F3        &kp F4        &kp F5        &kp F6            &kp F7         &kp F8     &kp F9            &kp F10            &kp F11          &kp F12
+&trans  &kp K_CALC    &kp N7        &kp N8        &kp N9        &mt MINUS PLUS    &kp PAGE_UP    &kp HOME   &kp UP            &kp END            &kp PRINTSCREEN  &kp SCROLLLOCK
+&trans  &kp CAPSLOCK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans            &kp PAGE_DOWN  &kp LEFT   &kp DOWN          &kp RIGHT          &kp RIGHT        &kp MINUS
+&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none             &none          &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none            &trans
+                                    &trans        &trans        &To0_macro        &mkp LCLK      &mkp RCLK
+                                                  &trans        &trans            &trans
             >;
         };
 
