@@ -43,41 +43,49 @@
         copy {
             bindings = <&kp K_COPY>;
             key-positions = <37 38>;
+            layers = <0 1>;
         };
 
         paste {
             bindings = <&kp K_PASTE>;
             key-positions = <39 40>;
+            layers = <0 1>;
         };
 
         Parenthesis_Left {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <7 8>;
+            layers = <0 2>;
         };
 
         Parenthesis_R {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <9 10>;
+            layers = <0 1>;
         };
 
         Scroll_down {
             bindings = <&kp K_SCROLL_DOWN>;
             key-positions = <51 55>;
+            layers = <0 1>;
         };
 
         Scroll_up {
             bindings = <&kp K_SCROLL_UP>;
             key-positions = <52 55>;
+            layers = <0 1>;
         };
 
         Previous {
             bindings = <&mkp MB4>;
             key-positions = <53 54>;
+            layers = <0 1>;
         };
 
         Next {
             bindings = <&mkp MB5>;
             key-positions = <49 50>;
+            layers = <0 1>;
         };
     };
 
@@ -88,6 +96,13 @@
             #binding-cells = <0>;
             bindings = <&tog 1>, <&tog 2>;
         };
+
+        lgui_hanguel: lgui_hanguel {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LGUI_HANGUEL";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LANG_HANGEUL>;
+        };
     };
 
     keymap {
@@ -95,12 +110,12 @@
 
         QWERTY {
             bindings = <
-&mt SQT ESC       &kp N1  &kp N2   &kp N3     &kp N4     &kp N5                   &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &mt MINUS BACKSPACE
-&kp TAB           &kp Q   &kp W    &kp E      &kp R      &kp T                    &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp LEFT_SHIFT    &kp A   &lt 4 S  &kp D      &lt 3 F    &kp G                    &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z   &kp X    &kp C      &kp V      &kp B                    &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                   &kp SPACE  &tog 1     &mt LANG_HANGEUL LGUI    &kp RIGHT_ALT  &kp SPACE
-                                              &mkp LCLK  &mkp RCLK                &kp ENTER
+&mt SQT ESC       &kp N1  &kp N2   &kp N3     &kp N4     &kp N5           &kp N6         &kp N7   &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB           &kp Q   &kp W    &kp E      &kp R      &kp T            &kp Y          &kp U    &kp I      &kp O    &kp P     &kp BSLH
+&kp LEFT_SHIFT    &kp A   &lt 4 S  &kp D      &lt 3 F    &kp G            &kp H          &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X    &kp C      &kp V      &kp B            &kp N          &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                   &kp SPACE  &tog 1     &lgui_hanguel    &kp RIGHT_ALT  &kp DEL
+                                              &mkp LCLK  &mkp RCLK        &kp ENTER
             >;
         };
 
@@ -110,7 +125,7 @@
 &kp KP_NUMLOCK  &kp BACKSPACE  &kp N7        &kp N8        &kp N9        &mt MINUS PLUS               &kp PAGE_UP           &kp HOME               &kp UP            &kp END            &kp PRINTSCREEN  &kp SCROLLLOCK
 &kp K_CALC      &kp DELETE     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &kp PAGE_DOWN         &kp LEFT               &kp DOWN          &kp RIGHT          &none            &kp MINUS
 &kp CAPSLOCK    &kp CLEAR      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none            &trans
-                                             &trans        &mo 0         &none                        &kp K_SCROLL_UP       &mkp MB4
+                                             &trans        &mo 0         &lgui_hanguel                &kp K_SCROLL_UP       &mkp MB4
                                                            &mkp LCLK     &mkp RCLK                    &kp K_SCROLL_DOWN
             >;
         };
