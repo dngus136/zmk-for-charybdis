@@ -51,14 +51,14 @@
             layers = <0 1>;
         };
 
-        Scroll_down {
-            bindings = <&kp C_AC_SCROLL_DOWN>;
+        Page_down {
+            bindings = <&kp PAGE_DOWN>;
             key-positions = <51 55>;
             layers = <0 1>;
         };
 
-        Scroll_up {
-            bindings = <&kp C_AC_SCROLL_UP>;
+        Page_up {
+            bindings = <&kp PAGE_UP>;
             key-positions = <52 55>;
             layers = <0 1>;
         };
