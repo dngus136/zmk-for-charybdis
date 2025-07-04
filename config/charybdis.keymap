@@ -69,6 +69,16 @@
             bindings = <&kp K_SCROLL_UP>;
             key-positions = <52 55>;
         };
+
+        Previous {
+            bindings = <&mkp MB4>;
+            key-positions = <53 54>;
+        };
+
+        Next {
+            bindings = <&mkp MB5>;
+            key-positions = <49 50>;
+        };
     };
 
     behaviors {
@@ -76,7 +86,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_BEHAVIOR";
             #binding-cells = <0>;
-            bindings = <&tog 1>, <&tog 2>, <&tog 3>;
+            bindings = <&tog 1>, <&tog 2>;
         };
     };
 
@@ -96,12 +106,12 @@
 
         F_layers {
             bindings = <
-&kp F1  &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7                &kp F8                 &kp F9            &kp F10            &kp F11          &kp F12
-&trans  &kp K_CALC    &kp N7        &kp N8        &kp N9        &mt MINUS PLUS               &kp PAGE_UP           &kp HOME               &kp UP            &kp END            &kp PRINTSCREEN  &kp SCROLLLOCK
-&trans  &kp CAPSLOCK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &kp PAGE_DOWN         &kp LEFT               &kp DOWN          &kp RIGHT          &none            &kp MINUS
-&trans  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none            &trans
-                                    &trans        &mo 0         &to 2                        &kp K_SCROLL_UP       &mkp MB4
-                                                  &mkp LCLK     &mkp RCLK                    &kp K_SCROLL_DOWN
+&kp F1          &kp F2         &kp F3        &kp F4        &kp F5        &kp F6                       &kp F7                &kp F8                 &kp F9            &kp F10            &kp F11          &kp F12
+&kp KP_NUMLOCK  &kp BACKSPACE  &kp N7        &kp N8        &kp N9        &mt MINUS PLUS               &kp PAGE_UP           &kp HOME               &kp UP            &kp END            &kp PRINTSCREEN  &kp SCROLLLOCK
+&kp K_CALC      &kp DELETE     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &kp PAGE_DOWN         &kp LEFT               &kp DOWN          &kp RIGHT          &none            &kp MINUS
+&kp CAPSLOCK    &kp CLEAR      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none            &trans
+                                             &trans        &mo 0         &none                        &kp K_SCROLL_UP       &mkp MB4
+                                                           &mkp LCLK     &mkp RCLK                    &kp K_SCROLL_DOWN
             >;
         };
 
