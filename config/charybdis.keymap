@@ -91,13 +91,13 @@
 
         ScrollUp {
             bindings = <&msc SCRL_UP>;
-            key-positions = <43 44>;
+            key-positions = <44 45>;
             layers = <0 2>;
         };
 
         ScrollDown {
             bindings = <&msc SCRL_DOWN>;
-            key-positions = <43 42>;
+            key-positions = <43 44>;
             layers = <0 1>;
         };
 
