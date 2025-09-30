@@ -181,7 +181,7 @@
 &kp F1          &kp F2              &kp F3        &kp F4             &kp F5        &kp F6                       &kp F7             &kp F8            &kp F9             &kp F10    &kp F11          &mt F12 BACKSPACE
 &kp KP_NUMLOCK  &kp BACKSPACE       &kp N7        &kp N8             &kp N9        &mt MINUS PLUS               &kp C_VOLUME_UP    &kp HOME          &kp UP             &kp END    &kp PRINTSCREEN  &kp SCROLLLOCK
 &kp K_CALC      &kp DELETE          &kp NUMBER_4  &mt LEFT_SHIFT N5  &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN           &kp RIGHT  &kp LS(LG(S))    &kp MINUS
-&kp LCTRL       &mt CLEAR NUMBER_0  &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp CAPSLOCK                 &kp K_MUTE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT          &trackball_mode_toggle
+&kp LCTRL       &mt CLEAR NUMBER_0  &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp CAPSLOCK                 &kp K_MUTE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT          &trans
                                                   &kp SPACE          &to 0         &lgui_hanguel                &kp LEFT_ALT       &kp DELETE
                                                                      &mkp LCLK     &mkp RCLK                    &kp ENTER
             >;
