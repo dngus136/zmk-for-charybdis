@@ -157,7 +157,8 @@
             bindings = <&kp LGUI>, <&kp LANG_HANGEUL>;
         };
     };
-./
+
+    ./
 
     keymap {
         compatible = "zmk,keymap";
