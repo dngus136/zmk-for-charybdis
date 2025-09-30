@@ -158,6 +158,9 @@
         };
     };
 
+
+    TRACKBALL_MODE_TOGGLE,
+
     keymap {
         compatible = "zmk,keymap";
 
