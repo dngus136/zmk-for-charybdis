@@ -26,6 +26,13 @@
         };
     };
 
+    input_processors {
+            compatible = "zmk,input-processor-zip-scroll";
+            trackball_scroll_processor: zip_scroll_node {
+                compatible = "zmk,input-processor-zip-scroll";
+                // This behavior converts trackball movement into scroll events
+            };
+
     combos {
         compatible = "zmk,combos";
 
