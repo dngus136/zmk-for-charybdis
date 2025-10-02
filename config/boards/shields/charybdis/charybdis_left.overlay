@@ -17,6 +17,10 @@
 		;
 };
 
+&kscan_pointer_input {
+    status = "okay";
+};
+
 //RGB bus
 
 &pinctrl {
