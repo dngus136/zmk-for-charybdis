@@ -1,8 +1,8 @@
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
 
 
 
@@ -12,7 +12,6 @@
             compatible = "zmk,behavior-macro";
             label = "To0_macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFR &to 0>;
         };
 
         To2_macro: To2_macro {
@@ -21,10 +20,9 @@
             #binding-cells = <0>;
             bindings =
                 <&to 2>,
-                <&macro_wait_time 30>,
-                <&rgb_ug RGB_COLOR_HSB(250,100,50)>;
+                <&macro_wait_time 30>;
         };
-    };
+      };
 
 
     combos {
@@ -92,14 +90,14 @@
             key-positions = <33 34>;
         };
 
-        ScrollUp {
-            bindings = <&msc SCRL_UP>;
+        ScrollHold {
+            bindings = <&mkp SCRL>;
             key-positions = <44 45>;
             layers = <0 2>;
         };
 
-        ScrollDown {
-            bindings = <&msc SCRL_DOWN>;
+        ScrollDrag {
+            bindings = <&scroll_drag>;
             key-positions = <43 44>;
             layers = <0 1>;
         };
@@ -133,18 +131,6 @@
             layers = <0 1>;
         };
 
-        TaskLeft {
-            bindings = <&kp C_AL_PREVIOUS_TASK>;
-            key-positions = <13 14>;
-            layers = <0 1>;
-        };
-
-        TaskRight {
-            bindings = <&kp C_AL_PREVIOUS_TASK>;
-            key-positions = <14 15>;
-            layers = <0 1>;
-        };
-
         Equal {
             bindings = <&kp EQUAL>;
             key-positions = <10 11>;
@@ -159,8 +145,17 @@
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kp LANG_HANGEUL>;
         };
-    };
+ 
 
+    scroll_drag: scroll_drag {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SCROLL_DRAG";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mkp SCRL>, <&mkp LCLK>;
+        };
+    };
     
 
     keymap {
@@ -168,23 +163,23 @@
 
         QWERTY {
             bindings = <
-&mt SQT ESC       &kp N1  &mt F2 N2  &kp N3     &kp N4     &kp N5           &kp N6        &kp N7      &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB           &kp Q   &kp W      &kp E      &kp R      &kp T            &kp Y         &kp U       &kp I      &kp O    &kp P     &mt BSLH MINUS
-&kp LEFT_SHIFT    &kp A   &kp S      &kp D      &kp F      &kp G            &kp H         &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z   &kp X      &kp C      &kp V      &kp B            &kp N         &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                     &kp SPACE  &to 1      &lgui_hanguel    &kp LEFT_ALT  &kp DELETE
-                                                &mkp LCLK  &mkp RCLK        &kp ENTER
+&mt SQT ESC       &kp N1  	     &mt F2 N2     &kp N3              &kp N4             &kp N5                &kp N6        	   &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB           &kp Q   	     &kp W         &kp E               &kp R              &kp T            	&kp Y         	   &kp U      &kp I      &kp O    &kp P     &mt BSLH MINUS
+&kp LEFT_SHIFT    &kp A   	     &kp S         &kp D               &kp F              &kp G            	&kp H         	   &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   	     &kp X         &kp C               &kp V              &kp B            	&kp N              &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                     		   &lt F_layers SPACE  &lt scroll_layers  &lgui_hanguel    	&kp LEFT_ALT       &kp DELETE
+                                                         	       &mkp LCLK          &mkp RCLK        	&kp ENTER
             >;
         };
 
         F_layers {
             bindings = <
-&kp F1          &kp F2              &kp F3        &kp F4             &kp F5        &kp F6                       &kp F7             &kp F8            &kp F9             &kp F10    &kp F11          &mt F12 BACKSPACE
-&kp KP_NUMLOCK  &kp BACKSPACE       &kp N7        &kp N8             &kp N9        &mt MINUS PLUS               &kp C_VOLUME_UP    &kp HOME          &kp UP             &kp END    &kp PRINTSCREEN  &kp SCROLLLOCK
-&kp K_CALC      &kp DELETE          &kp NUMBER_4  &mt LEFT_SHIFT N5  &kp NUMBER_6  &mt KP_DIVIDE KP_MULTIPLY    &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN           &kp RIGHT  &kp LS(LG(S))    &kp MINUS
-&kp LCTRL       &mt CLEAR NUMBER_0  &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &kp CAPSLOCK                 &kp K_MUTE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT          &trans
-                                                  &kp SPACE          &to 0         &lgui_hanguel                &kp LEFT_ALT       &kp DELETE
-                                                                     &mkp LCLK     &mkp RCLK                    &kp ENTER
+&mt ESC F1       &kp F2              &kp F3        &kp F4              &kp F5         &kp F6                       &kp F7                  &kp F8            &kp F9             &kp F10    &kp F11          &mt F12 BACKSPACE
+&kp KP_NUMLOCK   &kp BACKSPACE       &kp N7        &kp N8              &kp N9         &mt MINUS PLUS               &kp C_VOLUME_UP         &kp HOME          &kp UP             &kp END    &kp PRINTSCREEN  &kp SCROLLLOCK
+&kp K_CALC       &kp DELETE          &kp NUMBER_4  &mt LEFT_SHIFT N5   &kp NUMBER_6   &mt KP_DIVIDE KP_MULTIPLY    &kp C_VOLUME_DOWN       &kp LEFT          &kp DOWN           &kp RIGHT  &kp LS(LG(S))    &kp MINUS
+&kp LCTRL        &mt CLEAR NUMBER_0  &kp NUMBER_1  &kp NUMBER_2        &kp NUMBER_3   &kp CAPSLOCK                 &kp K_MUTE         	   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA  &kp DOT          &trans
+                                                   &kp SPACE           &trans         &lgui_hanguel                &kp LEFT_ALT       	   &kp DELETE
+                                                                       &mkp LCLK      &mkp RCLK                    &kp ENTER
             >;
         };
 
@@ -194,30 +189,30 @@
 &trans  &trans          &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &bt BT_NXT  &trans  &trans  &trans  &trans  &trans
-                                      &trans        &tog 0        &trans          &trans      &trans
+                                      &trans        &trans        &trans          &trans      &trans
                                                     &trans        &trans          &trans
             >;
         };
 
-        scroll-layers {
+        scroll_layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &kp C_TAB     &kp C_S_TAB   &kp HOME      &kp END          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp PAGE_UP   &kp PAGE_DOWN &kp UP_ARROW  &kp DOWN_ARROW   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT      &kp RIGHT     &kp ESC       &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &mo snipe_layers &trans  &trans  &trans
+                                                  &mkp LCLK        &mkp RCLK  &trans
             >;
         };
 
-        snipe-layers {
+        snipe_layers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &mkp LCLK  &mkp RCLK
-                                &trans  &trans    &trans
+&trans  &trans      &trans       &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp MB3    &scroll_drag &mkp RCLK  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ESC     &trans       &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans       &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans     &trans     &trans    &trans  &trans
+                                            &mkp LCLK  &mkp RCLK &trans
             >;
         };
     };
